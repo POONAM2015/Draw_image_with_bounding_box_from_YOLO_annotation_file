@@ -12,7 +12,7 @@ def write_image(image: List[float], image_dest_path: str) -> None:
     :param image_dest_path: destination path of image where it is to be written
     """
     cv2.imwrite(image_dest_path, image)
-    
+
 
 def show_image_annotation(image: List[float], bboxes: List[List[float]]) -> List[float]:
     """
@@ -97,7 +97,7 @@ if __name__ == '__main__':
     # main(SRC, DEST)
     print(sys.argv)
     if len(sys.argv) == 1:
-        main(r'_source_folder', r'_destination_folder')
+        main(r'source_folder', r'destination_folder')
     elif len(sys.argv) == 2:
         os.mkdir('_destination_folder')
         main(sys.argv[1], r'_destination_folder')
